@@ -7,4 +7,5 @@ target 'Lab1' do
 
   # Pods for Lab1
   pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
 end
