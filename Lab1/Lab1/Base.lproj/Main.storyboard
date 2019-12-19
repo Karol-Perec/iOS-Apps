@@ -65,7 +65,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="16-day weather"/>
                                 <connections>
-                                    <action selector="longTermWeatherButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0o-va-eMg"/>
+                                    <segue destination="5YZ-pv-3LQ" kind="show" identifier="mainVCtoTableVC" id="9Ua-ct-UMf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-l2-MVc">
@@ -104,12 +104,11 @@
                         <outlet property="temperature" destination="HoI-zR-PSa" id="8n8-r5-u4v"/>
                         <outlet property="weatherDescripiton" destination="4MB-l2-MVc" id="80T-zb-Dvv"/>
                         <outlet property="weatherImage" destination="hI6-ME-dPk" id="NMz-jN-CbL"/>
-                        <segue destination="5YZ-pv-3LQ" kind="show" identifier="mainVCtoTableVC" id="RH7-Qb-Liq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="27"/>
+            <point key="canvasLocation" x="758" y="18"/>
         </scene>
         <!--Long Term Weather Table View Controller-->
         <scene sceneID="jYR-uZ-FhY">
@@ -132,14 +131,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKI-qR-q5h">
-                                            <rect key="frame" x="80" y="12" width="42" height="21"/>
+                                            <rect key="frame" x="80" y="12" width="107" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-al-XVV">
-                                            <rect key="frame" x="146" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="239" y="10" width="42" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -159,10 +158,11 @@
                             <outlet property="delegate" destination="5YZ-pv-3LQ" id="el2-Oc-CWe"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="VxN-vx-L3P"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQA-mA-ycn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800.8" y="17.541229385307346"/>
+            <point key="canvasLocation" x="1476" y="17.541229385307346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Lo-Am-O3y">
