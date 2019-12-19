@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66A36E75A5C0A6AB555E1C8F /* Pods_Lab1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC22FC0B0B7521BA1A9261A /* Pods_Lab1.framework */; };
+		F9266EA823AACDB20008A045 /* LongTermWeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9266EA723AACDB20008A045 /* LongTermWeatherTableViewController.swift */; };
 		F98F62CB23A94DAF00F37950 /* LongTermWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F62CA23A94DAF00F37950 /* LongTermWeatherTableViewCell.swift */; };
 		F9C142E523A2E7D6003F070A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C142E423A2E7D6003F070A /* AppDelegate.swift */; };
 		F9C142E723A2E7D6003F070A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C142E623A2E7D6003F070A /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		1DED5A838DA97CE3D1E78D23 /* Pods-Lab1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab1.debug.xcconfig"; path = "Target Support Files/Pods-Lab1/Pods-Lab1.debug.xcconfig"; sourceTree = "<group>"; };
 		6FC22FC0B0B7521BA1A9261A /* Pods_Lab1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A10D49027E8BB1C5A3BFF9 /* Pods-Lab1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab1.release.xcconfig"; path = "Target Support Files/Pods-Lab1/Pods-Lab1.release.xcconfig"; sourceTree = "<group>"; };
+		F9266EA723AACDB20008A045 /* LongTermWeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermWeatherTableViewController.swift; sourceTree = "<group>"; };
 		F98F62CA23A94DAF00F37950 /* LongTermWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		F9C142E123A2E7D6003F070A /* Lab1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C142E423A2E7D6003F070A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				F9C142ED23A2E7D7003F070A /* LaunchScreen.storyboard */,
 				F9C142F023A2E7D7003F070A /* Info.plist */,
 				F98F62CA23A94DAF00F37950 /* LongTermWeatherTableViewCell.swift */,
+				F9266EA723AACDB20008A045 /* LongTermWeatherTableViewController.swift */,
 			);
 			path = Lab1;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				F9C142E723A2E7D6003F070A /* ViewController.swift in Sources */,
 				F98F62CB23A94DAF00F37950 /* LongTermWeatherTableViewCell.swift in Sources */,
+				F9266EA823AACDB20008A045 /* LongTermWeatherTableViewController.swift in Sources */,
 				F9C142E523A2E7D6003F070A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

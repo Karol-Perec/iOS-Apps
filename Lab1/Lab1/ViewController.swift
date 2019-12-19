@@ -20,21 +20,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherDescripiton: UILabel!
     
     let appId = "fb68fb31212518fa986c58366250f021"
-    let apiSearchUrl = "https://api.openweathermap.org/data/2.5/weather"
+    let currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather"
+    let longTermWeatherUrl = "https://api.openweathermap.org/data/2.5/forecast"
+    var cityId = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "mainVCtoTableVC"){
+            debugPrint("111121544")
+            let tableVC = segue.destination as! LongTermWeatherTableViewController
+            Alamofire.request(longTermWeatherUrl, parameters: ["id": self.cityId, "APPID": appId, "units": "metric"])
+                .responseJSON { (response) in
+                    tableVC.days = JSON(response.value!)
+            }
+        }
+    }
+
+    @IBAction func longTermWeatherButtonTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "mainVCtoTableVC", sender: self)
+        debugPrint("XDDDDD")
     }
     
     @IBOutlet weak var weather: UIStackView!
     @IBAction func search(_ sender: UIButton) {
-        debugPrint("KEKW")
-        
-        Alamofire.request(apiSearchUrl, parameters: ["q": searchField.text!, "APPID": appId, "units": "metric"])
+        Alamofire.request(currentWeatherUrl, parameters: ["q": searchField.text!, "APPID": appId, "units": "metric"])
             .responseJSON { (response) in
                 let data = JSON(response.value!)
-                debugPrint(response.value!)
                 self.cityName.text = data["name"].stringValue
                 
                 let formatter = MeasurementFormatter()
@@ -57,7 +72,7 @@ class ViewController: UIViewController {
                 
                 self.weatherDescripiton.text = data["weather"][0]["description"].stringValue
                 
-                
+                self.cityId = data["id"].stringValue
             }
-}
+        }
 }

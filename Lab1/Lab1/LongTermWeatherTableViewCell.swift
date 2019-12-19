@@ -9,7 +9,11 @@
 import UIKit
 
 class LongTermWeatherTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var dayImage: UIImageView!
+    @IBOutlet weak var dayDate: UILabel!
+    @IBOutlet weak var dayTemperature: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
