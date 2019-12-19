@@ -12,6 +12,8 @@ class LongTermWeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var dayImage: UIImageView!
     @IBOutlet weak var dayDate: UILabel!
     @IBOutlet weak var dayTemperature: UILabel!
+    @IBOutlet weak var humidity: UILabel!
+    @IBOutlet weak var wind: UILabel!
     
     
     override func awakeFromNib() {
