@@ -24,10 +24,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GgH-E9-bjD">
-                                <rect key="frame" x="16" y="183" width="343" height="464"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CityName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQd-vE-ciH">
                                 <rect key="frame" x="119" y="348" width="137" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -63,7 +59,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHz-lK-nqz">
                                 <rect key="frame" x="112" y="448" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="16-day weather"/>
+                                <state key="normal" title="5-day weather"/>
                                 <connections>
                                     <segue destination="5YZ-pv-3LQ" kind="show" identifier="mainVCtoTableVC" id="9Ua-ct-UMf"/>
                                 </connections>
@@ -81,6 +77,14 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rOL-s3-6dr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ0-EF-Vt1">
+                                <rect key="frame" x="20" y="122" width="46" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Location"/>
+                                <connections>
+                                    <action selector="location:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ri4-Pb-qWd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="18"/>
+            <point key="canvasLocation" x="757.60000000000002" y="17.541229385307346"/>
         </scene>
         <!--Long Term Weather Table View Controller-->
         <scene sceneID="jYR-uZ-FhY">
@@ -183,4 +187,7 @@
             <point key="canvasLocation" x="37.600000000000001" y="18.440779610194905"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Location" width="512" height="512"/>
+    </resources>
 </document>

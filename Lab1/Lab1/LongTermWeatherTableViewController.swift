@@ -29,12 +29,11 @@ class LongTermWeatherTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "LongTermWeatherTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! LongTermWeatherTableViewCell
-        debugPrint(self.days)
         let day = days["list"][indexPath.row]
         
         let date = Date(timeIntervalSince1970: day["dt"].doubleValue)
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM hh:mm"
+        dateFormatter.dateFormat = "dd.MM HH:mm"
         let str = dateFormatter.string(from: date)
         cell.dayDate.text = str
         
@@ -45,9 +44,15 @@ class LongTermWeatherTableViewController: UITableViewController {
         cell.dayTemperature.text = formatter.string(from: temp)
         
         let iconCode = day["weather"][0]["icon"].stringValue
+        
+        
         Alamofire.request("https://openweathermap.org/img/wn/\(iconCode)@2x.png")
+            .validate(statusCode: 200..<300)
             .response(completionHandler: ({ (response) in
-                cell.dayImage.image = UIImage(data: response.data!, scale: 1)
+                if let data = response.data {
+                    cell.dayImage.image = UIImage(data: data, scale: 1)
+                }
+                
             }))
         
         return cell
