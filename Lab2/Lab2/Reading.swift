@@ -28,7 +28,7 @@ class Reading: NSObject, NSCoding {
     
     //MARK: Initialization
     init(sensors: [Sensor]) {
-        self.timestamp = Double.random(in: 1546300800 ... 1577836799)
+        self.timestamp = Double.random(in: 1546300800 ... 1577836799).rounded()
         self.sensor = sensors.randomElement()!
         self.value = Float.random(in: 0 ... 100)
     }
