@@ -11,7 +11,7 @@ import Foundation
 class Reading: NSObject, NSCoding {
     
     //MARK: Properties
-    var timestamp: Double
+    var timestamp: Int
     var sensor: Sensor
     var value: Float
     
@@ -28,12 +28,12 @@ class Reading: NSObject, NSCoding {
     
     //MARK: Initialization
     init(sensors: [Sensor]) {
-        self.timestamp = Double.random(in: 1546300800 ... 1577836799).rounded()
+        self.timestamp = Int.random(in: 1546300800 ... 1577836799)
         self.sensor = sensors.randomElement()!
         self.value = Float.random(in: 0 ... 100)
     }
     
-    init(timestamp: Double, sensor: Sensor, value: Float) {
+    init(timestamp: Int, sensor: Sensor, value: Float) {
         self.timestamp = timestamp
         self.sensor = sensor
         self.value = value
@@ -47,7 +47,7 @@ class Reading: NSObject, NSCoding {
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        let timestamp = aDecoder.decodeDouble(forKey: PropertyKey.timestamp)
+        let timestamp = aDecoder.decodeInteger(forKey: PropertyKey.timestamp)
         let sensor = aDecoder.decodeObject(forKey: PropertyKey.sensor) as! Sensor
         let value = aDecoder.decodeFloat(forKey: PropertyKey.value)
         

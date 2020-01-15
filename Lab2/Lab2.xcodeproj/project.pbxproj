@@ -15,6 +15,11 @@
 		F9CB23EC23CBA2910076104D /* Lab2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9CB23EA23CBA2910076104D /* Lab2.xcdatamodeld */; };
 		F9CB23EE23CBA2930076104D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CB23ED23CBA2930076104D /* Assets.xcassets */; };
 		F9CB23F123CBA2930076104D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9CB23EF23CBA2930076104D /* LaunchScreen.storyboard */; };
+		F9DDE98B23CE7A8C00EA58A0 /* ArchivingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDE98A23CE7A8C00EA58A0 /* ArchivingTests.swift */; };
+		F9DDE98D23CE7B7700EA58A0 /* SqLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDE98C23CE7B7700EA58A0 /* SqLiteTests.swift */; };
+		F9DDE99123CE888D00EA58A0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DDE99023CE888D00EA58A0 /* libsqlite3.tbd */; };
+		F9DDE99323CE88F300EA58A0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DDE99223CE88F300EA58A0 /* libsqlite3.0.tbd */; };
+		F9DDE99623CEA42400EA58A0 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDE99523CEA42400EA58A0 /* CoreDataTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,12 @@
 		F9CB23ED23CBA2930076104D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9CB23F023CBA2930076104D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9CB23F223CBA2930076104D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9DDE98A23CE7A8C00EA58A0 /* ArchivingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivingTests.swift; sourceTree = "<group>"; };
+		F9DDE98C23CE7B7700EA58A0 /* SqLiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqLiteTests.swift; sourceTree = "<group>"; };
+		F9DDE99023CE888D00EA58A0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F9DDE99223CE88F300EA58A0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F9DDE99423CE893200EA58A0 /* Lab2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lab2-Bridging-Header.h"; sourceTree = "<group>"; };
+		F9DDE99523CEA42400EA58A0 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9DDE99323CE88F300EA58A0 /* libsqlite3.0.tbd in Frameworks */,
+				F9DDE99123CE888D00EA58A0 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,8 +57,10 @@
 		F9CB23D723CBA2910076104D = {
 			isa = PBXGroup;
 			children = (
+				F9DDE99423CE893200EA58A0 /* Lab2-Bridging-Header.h */,
 				F9CB23E223CBA2910076104D /* Lab2 */,
 				F9CB23E123CBA2910076104D /* Products */,
+				F9DDE98F23CE888D00EA58A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +84,20 @@
 				F9CB23EA23CBA2910076104D /* Lab2.xcdatamodeld */,
 				F9B6236C23CE2D3500555E59 /* Sensor.swift */,
 				F9B6236E23CE383B00555E59 /* Reading.swift */,
+				F9DDE98A23CE7A8C00EA58A0 /* ArchivingTests.swift */,
+				F9DDE98C23CE7B7700EA58A0 /* SqLiteTests.swift */,
+				F9DDE99523CEA42400EA58A0 /* CoreDataTests.swift */,
 			);
 			path = Lab2;
+			sourceTree = "<group>";
+		};
+		F9DDE98F23CE888D00EA58A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9DDE99223CE88F300EA58A0 /* libsqlite3.0.tbd */,
+				F9DDE99023CE888D00EA58A0 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +174,11 @@
 				F9CB23EC23CBA2910076104D /* Lab2.xcdatamodeld in Sources */,
 				F9B6236D23CE2D3500555E59 /* Sensor.swift in Sources */,
 				F9CB23E623CBA2910076104D /* ViewController.swift in Sources */,
+				F9DDE98D23CE7B7700EA58A0 /* SqLiteTests.swift in Sources */,
+				F9DDE99623CEA42400EA58A0 /* CoreDataTests.swift in Sources */,
 				F9B6236F23CE383B00555E59 /* Reading.swift in Sources */,
 				F9CB23E423CBA2910076104D /* AppDelegate.swift in Sources */,
+				F9DDE98B23CE7A8C00EA58A0 /* ArchivingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +333,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = perec.Lab2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lab2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +352,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = perec.Lab2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lab2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

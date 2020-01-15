@@ -12,6 +12,11 @@ import Foundation
 class ViewController: UIViewController {
     static let numberOfReadings = 100
     
+    @IBOutlet weak var dataGenerationInfo: UILabel!
+    @IBOutlet weak var timestampQueryInfo: UILabel!
+    @IBOutlet weak var averageReadingInfo: UILabel!
+    @IBOutlet weak var readingPerSensorInfo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,50 +25,59 @@ class ViewController: UIViewController {
     @IBAction func runArchivingTest(_ sender: UIButton) {
         
         let t1 = NSDate()
-        generateArchivingData()
+        generateDataArchiving()
         let t2 = NSDate()
-        print("Generation time: \(t2.timeIntervalSince(t1 as Date))")
-
-//        guard let data2 = NSKeyedUnarchiver.unarchiveObject(withFile: Sensor.ArchiveURL.path) as? [Sensor] else {
-//            fatalError("Cannot read data")
-//        }
-//
-//        for sensor in data2 {
-//            print(sensor.name + sensor.desc)
-//        }
+        dataGenerationInfo.text = "\(t2.timeIntervalSince(t1 as Date))"
+    
+        timestampQueryArchiving()
+        let t3 = NSDate()
+        timestampQueryInfo.text = "\(t3.timeIntervalSince(t2 as Date))"
         
-//        for reading1 in readings {
-//            print("\(reading1.timestamp) \(reading1.sensor.name)\(reading1.sensor.desc) \(reading1.value)")
-//        }
+        averageReadingQueryArchiving()
+        let t4 = NSDate()
+        averageReadingInfo.text = "\(t4.timeIntervalSince(t3 as Date))"
+        
+        readingPerSensorQueryArchiving()
+        let t5 = NSDate()
+        readingPerSensorInfo.text = "\(t5.timeIntervalSince(t4 as Date))"
     }
     
-    func generateArchivingData() {
-        var sensors = [Sensor]()
-        var readings = [Reading]()
+    @IBAction func runSqLiteTests(_ sender: UIButton) {
+        let t1 = NSDate()
+        generateDataSqLite()
+        let t2 = NSDate()
+        dataGenerationInfo.text = "\(t2.timeIntervalSince(t1 as Date))"
         
-//        for i in 1...20 {
-//            let sensor = Sensor(name: String(format: "S%02d", i), desc: "Sensor number \(i)")
-//            sensors.append(sensor)
-//        }
-//
-//        let isSuccessfulSensorsSave = NSKeyedArchiver.archiveRootObject(sensors, toFile: Sensor.ArchiveURL.path)
-//        if isSuccessfulSensorsSave {
-//            print("Sensors successfully saved.")
-//        } else {
-//            print("Failed to save meals...")
-//        }
-//
-//        for _ in 1...ViewController.numberOfReadings {
-//            let reading = Reading(sensors: sensors)
-//            readings.append(reading)
-//        }
-//
-//        let isSuccessfulReadingsSave = NSKeyedArchiver.archiveRootObject(readings, toFile: Reading.ArchiveURL.path)
-//        if isSuccessfulReadingsSave {
-//            print("Readings successfully saved.")
-//        } else {
-//            print("Failed to save meals...")
-//        }
+        timestampQuerySqLite()
+        let t3 = NSDate()
+        timestampQueryInfo.text = "\(t3.timeIntervalSince(t2 as Date))"
+        
+        averageReadingQuerySqLite()
+        let t4 = NSDate()
+        averageReadingInfo.text = "\(t4.timeIntervalSince(t3 as Date))"
+        
+        readingPerSensorQuerySqLite()
+        let t5 = NSDate()
+        readingPerSensorInfo.text = "\(t5.timeIntervalSince(t4 as Date))"
     }
+    
+    @IBAction func runCoreDataTests(_ sender: UIButton) {
+        let t1 = NSDate()
+        generateDataCoreData()
+        let t2 = NSDate()
+        dataGenerationInfo.text = "\(t2.timeIntervalSince(t1 as Date))"
+        
+        timestampQueryCoreData()
+        let t3 = NSDate()
+        timestampQueryInfo.text = "\(t3.timeIntervalSince(t2 as Date))"
+        
+        averageReadingQueryCoreData()
+        let t4 = NSDate()
+        averageReadingInfo.text = "\(t4.timeIntervalSince(t3 as Date))"
+        
+        readingPerSensorQueryCoreData()
+        let t5 = NSDate()
+        readingPerSensorInfo.text = "\(t5.timeIntervalSince(t4 as Date))"
+    }
+    
 }
-
