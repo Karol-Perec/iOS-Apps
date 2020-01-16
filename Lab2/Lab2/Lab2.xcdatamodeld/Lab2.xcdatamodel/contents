@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Reading" representedClassName="Reading" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    <entity name="ReadingCD" representedClassName="ReadingCD" syncable="YES">
+        <attribute name="timestamp" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="value" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="sensor" maxCount="1" deletionRule="Nullify" destinationEntity="SensorCD" inverseName="readings" inverseEntity="SensorCD" syncable="YES"/>
     </entity>
-    <entity name="Sensor" representedClassName="Sensor" syncable="YES" codeGenerationType="class">
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="SensorCD" representedClassName="SensorCD" syncable="YES">
+        <attribute name="desc" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="readings" toMany="YES" deletionRule="Nullify" destinationEntity="ReadingCD" inverseName="sensor" inverseEntity="ReadingCD" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Sensor" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Reading" positionX="-54" positionY="9" width="128" height="75"/>
+        <element name="ReadingCD" positionX="68.0546875" positionY="-63.00390625" width="128" height="88"/>
+        <element name="SensorCD" positionX="404.02734375" positionY="-64.015625" width="128" height="88"/>
     </elements>
 </model>

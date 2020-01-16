@@ -12,6 +12,13 @@ func generateDataArchiving() {
     var sensors = [Sensor]()
     var readings = [Reading]()
     
+    do {
+        try FileManager.default.removeItem(atPath: Sensor.ArchiveURL.path)
+        try FileManager.default.removeItem(atPath: Reading.ArchiveURL.path)
+    } catch {
+        print("Could not delete file: \(error)")
+    }
+    
     for i in 1...20 {
         let sensor = Sensor(name: String(format: "S%02d", i), desc: "Sensor number \(i)")
         sensors.append(sensor)
@@ -63,7 +70,9 @@ func readingPerSensorQueryArchiving() {
     for i in 1...20 {
         let readingsPerSensor = readings.filter{ $0.sensor.name == String(format: "S%02d", i) }
         let numberOfReadingsPerSensor = readingsPerSensor.count
-        let averageReadingPerSensor = readingsPerSensor.reduce(0, {$0 + $1.value})/Float(numberOfReadingsPerSensor)
-        print("Sensor number \(i): number of readings is \(numberOfReadingsPerSensor), average: \(averageReadingPerSensor)")
+        if numberOfReadingsPerSensor != 0 {
+            let averageReadingPerSensor = readingsPerSensor.reduce(0, {$0 + $1.value})/Float(numberOfReadingsPerSensor)
+            print("Sensor number \(i): number of readings is \(numberOfReadingsPerSensor), average: \(averageReadingPerSensor)")
+        }
     }
 }

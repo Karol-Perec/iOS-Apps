@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F93D71FE23CFA9AF0042B9E2 /* ReadingCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D71FA23CFA9AF0042B9E2 /* ReadingCD+CoreDataClass.swift */; };
+		F93D71FF23CFA9AF0042B9E2 /* ReadingCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D71FB23CFA9AF0042B9E2 /* ReadingCD+CoreDataProperties.swift */; };
+		F93D720023CFA9AF0042B9E2 /* SensorCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D71FC23CFA9AF0042B9E2 /* SensorCD+CoreDataClass.swift */; };
+		F93D720123CFA9AF0042B9E2 /* SensorCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D71FD23CFA9AF0042B9E2 /* SensorCD+CoreDataProperties.swift */; };
 		F9B6236D23CE2D3500555E59 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B6236C23CE2D3500555E59 /* Sensor.swift */; };
 		F9B6236F23CE383B00555E59 /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B6236E23CE383B00555E59 /* Reading.swift */; };
 		F9CB23E423CBA2910076104D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB23E323CBA2910076104D /* AppDelegate.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F93D71FA23CFA9AF0042B9E2 /* ReadingCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReadingCD+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F93D71FB23CFA9AF0042B9E2 /* ReadingCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReadingCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F93D71FC23CFA9AF0042B9E2 /* SensorCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorCD+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F93D71FD23CFA9AF0042B9E2 /* SensorCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F9B6236C23CE2D3500555E59 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		F9B6236E23CE383B00555E59 /* Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reading.swift; sourceTree = "<group>"; };
 		F9CB23E023CBA2910076104D /* Lab2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +83,10 @@
 		F9CB23E223CBA2910076104D /* Lab2 */ = {
 			isa = PBXGroup;
 			children = (
+				F93D71FA23CFA9AF0042B9E2 /* ReadingCD+CoreDataClass.swift */,
+				F93D71FB23CFA9AF0042B9E2 /* ReadingCD+CoreDataProperties.swift */,
+				F93D71FC23CFA9AF0042B9E2 /* SensorCD+CoreDataClass.swift */,
+				F93D71FD23CFA9AF0042B9E2 /* SensorCD+CoreDataProperties.swift */,
 				F9CB23E323CBA2910076104D /* AppDelegate.swift */,
 				F9CB23E523CBA2910076104D /* ViewController.swift */,
 				F9CB23E723CBA2910076104D /* Main.storyboard */,
@@ -171,12 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93D71FE23CFA9AF0042B9E2 /* ReadingCD+CoreDataClass.swift in Sources */,
 				F9CB23EC23CBA2910076104D /* Lab2.xcdatamodeld in Sources */,
 				F9B6236D23CE2D3500555E59 /* Sensor.swift in Sources */,
 				F9CB23E623CBA2910076104D /* ViewController.swift in Sources */,
 				F9DDE98D23CE7B7700EA58A0 /* SqLiteTests.swift in Sources */,
+				F93D71FF23CFA9AF0042B9E2 /* ReadingCD+CoreDataProperties.swift in Sources */,
 				F9DDE99623CEA42400EA58A0 /* CoreDataTests.swift in Sources */,
 				F9B6236F23CE383B00555E59 /* Reading.swift in Sources */,
+				F93D720123CFA9AF0042B9E2 /* SensorCD+CoreDataProperties.swift in Sources */,
+				F93D720023CFA9AF0042B9E2 /* SensorCD+CoreDataClass.swift in Sources */,
 				F9CB23E423CBA2910076104D /* AppDelegate.swift in Sources */,
 				F9DDE98B23CE7A8C00EA58A0 /* ArchivingTests.swift in Sources */,
 			);

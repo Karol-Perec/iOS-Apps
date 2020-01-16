@@ -70,6 +70,9 @@
                                 <rect key="frame" x="294" y="55" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="CoreData"/>
+                                <connections>
+                                    <action selector="runCoreDataTests:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHE-VR-nbe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data Generation Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-TV-TyI">
                                 <rect key="frame" x="16" y="93" width="343" height="21"/>

@@ -8,9 +8,10 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 class ViewController: UIViewController {
-    static let numberOfReadings = 100
+    static let numberOfReadings = 10
     
     @IBOutlet weak var dataGenerationInfo: UILabel!
     @IBOutlet weak var timestampQueryInfo: UILabel!
